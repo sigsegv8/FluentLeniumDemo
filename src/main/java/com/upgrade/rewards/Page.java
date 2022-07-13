@@ -1,4 +1,4 @@
-package com.walmart.page;
+package com.upgrade.rewards;
 
 import org.fluentlenium.core.FluentPage;
 

@@ -1,44 +1,37 @@
-import com.walmart.page.ProductItemPage;
 import org.fluentlenium.adapter.testng.FluentTestNg;
 import org.fluentlenium.core.annotation.Page;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
+import com.upgrade.rewards.rewardscheckinglandingpage;
 
-public class ItemPageTest extends FluentTestNg {
+public class MyTest extends FluentTestNg {
 
     @Page
-    private ProductItemPage productItemPage;
+    public rewardscheckinglandingpage rewardscheckingpage;
 
     @Test(priority = 0)
     public void testCase1(){
-        productItemPage.go("6000197045450");
-        productItemPage.ClickOnAddToCartButton();
+        rewardscheckingpage.go();
+        rewardscheckingpage.ClickOpenRewardsChecking();
         try{
-            Thread.sleep(10000);
+            Thread.sleep(5000);
         }
         catch (InterruptedException e){
             e.printStackTrace();
         }
-        productItemPage.confirmationPopup().continueShopping();
+        rewardscheckingpage.inputData();
     }
 
 
     @Test(priority = 2)
     public void testCase2(){
-        productItemPage.doSomething("4");
-        productItemPage.ClickOnAddToCartButton();
-        try{
-            Thread.sleep(10000);
-        }
-        catch (InterruptedException e){
-            e.printStackTrace();
-        }
     }
 
     @Override
     public WebDriver newWebDriver() {
+    	System.setProperty("webdriver.chrome.driver", "C:/Users/tayda/chromedriver.exe"); // Set for ChromeDriver
         return new ChromeDriver();
     }
 
