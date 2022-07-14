@@ -1,6 +1,6 @@
 # Automation Technical Interview
 
-This repo contains automation for an e product item page
+This repo contains a typical automation framework in Java with Selenium.
 
 ## Interviewee Expectations:
 
