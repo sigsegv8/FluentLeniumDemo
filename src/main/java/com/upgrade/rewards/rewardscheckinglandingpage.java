@@ -8,7 +8,7 @@ import org.openqa.selenium.By;
 public class rewardscheckinglandingpage extends Page {
    
     public void ClickOpenRewardsChecking(){
-    	FluentWebElement button = newFluent(getDriver().findElement(By.xpath("//*[@id='hero-section']/div/div/div/div/div[2]/div[2]/a")));
+    	FluentWebElement button = newFluent(getDriver().findElement(By.xpath("//*[@id='hero-section']/div[1]/div/div[1]/div/div[5]/div/a")));
         button.click();
     }
 
