@@ -12,8 +12,9 @@ You should understand the following concepts and technologies:
 
 - Java
 - Maven
-- Webdriver ( This project uses [fluentlenium](https://github.com/FluentLenium/FluentLenium), a wrapper for webdriver)
-- Frontend Automation concepts
+- Webdriver (This project uses [fluentlenium](https://github.com/FluentLenium/FluentLenium), a wrapper for webdriver)
+- API Testing concepts (This project uses RestAssured)
+- Frontend and API Automation concepts
 
 ## Environment dependencies
 
