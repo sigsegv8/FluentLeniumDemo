@@ -38,12 +38,11 @@ public class MyTest extends FluentTestNg {
     @Test
     public void test33() {
         Response res = given().contentType("application/json")
-                .headers("x-cf-source-id", "coding-challenge", "x-cf-corr-id", UUID.randomUUID(), "Content-Type", "application/json").body("{\n"
-                        + "\t\"username\": \"coding.challenge.login@upgrade.com\",\n"
-                        + "\t\"password\": \"On$3XcgsW#9q\",\n"
-                        + "\t\"recaptchaToken\": \"coding_challenge\"\n"
+                .headers("x-cf-source-id", "coding-challenge", "x-cf-corr-id", "fcb24980-be6c-11eb-8529-0242ac130003", "Content-Type", "application/json").body("{\n"
+                        + "\t\"loanAppUuid\": \"b8096ec7-2150-405f-84f5-ae99864b3e96\",\n"
+                        + "\t\"skipSideEffects\": true,\n"
                         + "}").when()
-                .post("https://credapi.credify.tech/api/brportorch/v2/login");
+                .post("https://credapi.credify.tech/api/brfunnelorch/v2/resume/byLeadSecret");
 
         String loginRes = res.asString();
         System.out.println(loginRes);
