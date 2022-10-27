@@ -5,17 +5,20 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
 import com.upgrade.rewards.rewardscheckinglandingpage;
+
 import java.util.UUID;
+
 import io.restassured.response.Response;
+
 import static io.restassured.RestAssured.*;
 
 /**
  * For the UI design phase, use the following links to help you:
- *      https://fluentlenium.com/quickstart/
- *      https://fluentlenium.com/docs/key_features/#page-object-pattern-support
- *
+ * https://fluentlenium.com/quickstart/
+ * https://fluentlenium.com/docs/key_features/#page-object-pattern-support
+ * <p>
  * For the API design phase, use the following links to help you:
- *      https://github.com/rest-assured/rest-assured/wiki/Usage
+ * https://github.com/rest-assured/rest-assured/wiki/Usage
  */
 public class MyTest extends FluentTestNg {
 
@@ -38,10 +41,8 @@ public class MyTest extends FluentTestNg {
     @Test
     public void test33() {
         Response res = given().contentType("application/json")
-                .headers("x-cf-source-id", "coding-challenge", "x-cf-corr-id", "fcb24980-be6c-11eb-8529-0242ac130003", "Content-Type", "application/json").body("{\n"
-                        + "\t\"loanAppUuid\": \"b8096ec7-2150-405f-84f5-ae99864b3e96\",\n"
-                        + "\t\"skipSideEffects\": true,\n"
-                        + "}").when()
+                .headers("x-cf-source-id", "coding-challenge", "x-cf-corr-id", "fcb24980-be6c-11eb-8529-0242ac130003", "Content-Type", "application/json")
+                .body("{\"loanAppUuid\":\"b8096ec7-2150-405f-84f5-ae99864b3e96\",\"skipSideEffects\":true}").when()
                 .post("https://credapi.credify.tech/api/brfunnelorch/v2/resume/byLeadSecret");
 
         String loginRes = res.asString();
